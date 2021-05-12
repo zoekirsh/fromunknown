@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+body {
+  color: white;
+  background-color: black;
+  font: "Helvetica neue";
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: space-evenly;
+  align-self: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

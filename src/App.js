@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React from 'react';
+import {
+  Route,
+  withRouter,
+  Switch,
+} from 'react-router-dom';
+// Style
 import './App.css';
+// Components
+import Landing from './components/Landing';
+import Art from './components/Art';
+import Crypto from './components/Crypto';
+import EComm from './components/EComm';
+import Photo from './components/Photo';
+import Approach from './components/Approach';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header></header>
+      <main>
+        <div className="main">
+          <Switch>
+            <Route exact path ="/" component={<Landing />} />
+            <Route exact path="/art" component={<Art />} />
+            <Route exact path="/crypto" component={<Crypto />} />
+            <Route exact path="/ecomm" component={<EComm />} />
+            <Route exact path="/photo" component={<Photo />} />
+            <Route exact path="/approach" component={<Approach />} />
+          </Switch>
+        </div>
+      </main>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);
