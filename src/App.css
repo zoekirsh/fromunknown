@@ -17,6 +17,8 @@ body {
   justify-content: center;
   align-content: space-evenly;
   align-self: center;
+  height: 100%;
+  margin: 0;
 }
 
 .App-logo {

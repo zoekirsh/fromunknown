@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  BrowserRouter as Router,
   Route,
   withRouter,
   Switch,
@@ -20,14 +21,16 @@ function App() {
       <header></header>
       <main>
         <div className="main">
-          <Switch>
-            <Route exact path ="/" component={<Landing />} />
-            <Route exact path="/art" component={<Art />} />
-            <Route exact path="/crypto" component={<Crypto />} />
-            <Route exact path="/ecomm" component={<EComm />} />
-            <Route exact path="/photo" component={<Photo />} />
-            <Route exact path="/approach" component={<Approach />} />
-          </Switch>
+          <Router>
+            <Switch>
+              <Route exact path ="/" component={Landing} />
+              <Route exact path="/art" component={Art} />
+              <Route exact path="/crypto" component={Crypto} />
+              <Route exact path="/ecomm" component={EComm} />
+              <Route exact path="/photo" component={Photo} />
+              <Route exact path="/approach" component={Approach} />
+            </Switch>
+          </Router>
         </div>
       </main>
     </div>

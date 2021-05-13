@@ -1,14 +1,15 @@
 import React from 'react';
-import Art from './Art';
+import { Redirect } from 'react-router-dom'
+// import Art from './Art';
 
 const Landing = () => {
   return (
     <div className="center">
-      <div>photo</div>
-      <div>e-commerce</div>
-      <div>crypto</div>
-      <div>art</div>
-      <div>approach</div>
+      <div><span onClick={() => <Redirect to="/photo" push={true}/>}>photo</span></div>
+      <div><span>e-commerce</span></div>
+      <div><span>crypto</span></div>
+      <div><span>art</span></div>
+      <div><span>approach</span></div>
     </div>
   )
 }
