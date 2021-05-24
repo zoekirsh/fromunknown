@@ -1,9 +1,10 @@
 import React from 'react';
+import Unknown from './Unknown';
 
 const Photo = () => {
   return (
     <div>
-      <p>photo page</p>
+      <Unknown />
     </div>
   )
 }

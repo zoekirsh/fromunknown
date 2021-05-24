@@ -1,9 +1,10 @@
 import React from 'react';
+import Unknown from './Unknown';
 
 const EComm = () => {
   return (
     <div>
-      <p>e-comm page</p>
+      <Unknown />
     </div>
   )
 }
