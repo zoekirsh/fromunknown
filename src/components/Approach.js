@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import emailjs from 'emailjs-com';
+import Back from './Back';
 
 const Approach = () => {
   const [inputs, setInputs] = useState({
@@ -32,21 +33,25 @@ const Approach = () => {
 
   return (
     <div>
+      <Back />
       {!submitted && 
-        <form onSubmit={sendEmail}>
-          <label>
-            name:
-              <input type="text" name="name" value={inputs.name} placeholder="romeo" onChange={handleChange} />
-          </label>
-          <label>
-            email: 
-              <input type="text" name="email" value={inputs.email} placeholder="romeo@feelings.com" onChange={handleChange} />
-          </label>
-          <label>
-            message:
-              <textarea name="message" value={inputs.message} placeholder="can we make out? yes or no" onChange={handleChange} />
-          </label>
-          <input type="submit" value="approach" />
+        <form className="center approach" onSubmit={sendEmail}>
+          <label> name </label>
+          <input type="text" name="name" value={inputs.name} placeholder="romeo" onChange={handleChange} />
+          
+          <br></br>
+
+          <label>email </label>
+          <input type="text" name="email" value={inputs.email} placeholder="romeo@feelings.com" onChange={handleChange} />
+         
+          <br></br>
+
+          <label> message </label>
+          <textarea name="message" value={inputs.message} placeholder="can we make out? yes/no" onChange={handleChange} />
+
+          <br></br>
+
+          <input className="submit-btn" type="submit" value="approach" />
         </form>
       }
       {submitted && 

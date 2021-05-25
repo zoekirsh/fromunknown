@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
-    <div className="center">
+    <div className="center landing">
       <div><Link to="/photo"><span>photo</span></Link></div>
       <div><Link to="/ecomm"><span>e-commerce</span></Link></div>
       <div><a target="_blank" rel="noreferrer" href="https://twitter.com/seeyounvr"><span>crypto</span></a></div>

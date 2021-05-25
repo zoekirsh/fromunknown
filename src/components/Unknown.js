@@ -1,9 +1,13 @@
 import React from 'react'; 
+import Back from './Back';
 
 const Unknown = () => {
   return (
     <div>
-      <p className="center">unknown</p>
+      <Back />
+      <div className="center landing">
+        <p>unknown.</p>
+      </div>
     </div>
   )
 }
