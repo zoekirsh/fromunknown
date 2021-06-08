@@ -16,7 +16,7 @@ const Landing = () => {
 
   return (
     <div id="circle-parent" className="center landing">
-      <div><Link to="/photo">{circleWord("photo", 0)}</Link><span className="char6"> </span></div>
+      <div><Link to="/photo">{circleWord("photo", 1)}</Link><span className="char6"> </span></div>
     
       <div><Link to="/ecomm">{circleWord("e-commerce", 7)}</Link><span className="char17"> </span></div>
     
