@@ -26,3 +26,9 @@ span {
   top: 0;
   transform-origin: bottom center;
 }
+
+@media screen and (min-width: 768px) {
+  span {
+    height: 150px;
+  }
+}
