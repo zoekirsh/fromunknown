@@ -1,0 +1,22 @@
+@mixin rotated-text($num-letters: 37, $angle-span: 360deg, $angle-offset: 0deg) {
+  $angle-per-char: $angle-span / $num-letters;
+  @for $i from 0 through $num-letters {
+    .char#{$i} {
+        transform: (rotate($angle-offset + $angle-per-char * $i))
+      }
+  }
+}
+
+
+#circle-parent {
+  @include rotated-text
+}
+
+span {
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+}

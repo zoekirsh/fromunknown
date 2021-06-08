@@ -1,27 +1,31 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import CircleType from 'circletype';
+import "../Custom.scss"
 
 const Landing = () => {
-  const circleText = useRef();
 
-  useEffect(() => {
-    new CircleType(circleText.current)
-  }, [])
+
+  const circleWord = (word, startingIndex) => {
+    return word.split("").map((char, i) => {
+      return (
+        <span className={`char${startingIndex + i}`}>{char}</span>
+      )
+    })
+  }
 
 
   return (
-    <div ref={circleText} id="circletext" className="center landing">
-      <span><Link to="/photo">photo</Link></span>
-      <span className="black">_</span>
-      <span><Link to="/ecomm">e-commerce</Link></span>
-      <span className="black">_</span>
-      <span><a target="_blank" rel="noreferrer" href="https://twitter.com/seeyounvr">crypto</a></span>
-      <span className="black">_</span>
-      <span><Link to="/art">art</Link></span>
-      <span className="black">_</span>
-      <span><Link to="/approach">approach</Link></span>
-      <span className="black">_</span>
+    <div id="circle-parent" className="center landing">
+      <div><Link to="/photo">{circleWord("photo", 0)}</Link><span className="char6"> </span></div>
+    
+      <div><Link to="/ecomm">{circleWord("e-commerce", 7)}</Link><span className="char17"> </span></div>
+    
+      <div><a target="_blank" rel="noreferrer" href="https://twitter.com/seeyounvr">{circleWord("crypto", 18)}</a><span className="char24"> </span></div>
+    
+      <div><Link to="/art">{circleWord("art", 25)}</Link><span className="char28"> </span></div>
+    
+      <div><Link to="/approach">{circleWord("approach", 29)}</Link><span className="char37"> </span></div>
+    
     </div>
   )
 }
